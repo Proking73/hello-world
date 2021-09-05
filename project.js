@@ -1,2 +1,2 @@
 
-document.getElementById("JELLLO_BELLO");
+document.getElementById("JELLLO_BELLO") = "BELLO_JELLLO";
