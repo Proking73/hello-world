@@ -2,6 +2,40 @@
 <html>
     <script src="project.js" defer></script>
     <head>
+      <style>
+        body {
+          background:conic-gradient(red, pink);
+        }
+        [data-tooltip] {
+          float: center;
+          text-align: center;
+          font-size: 400%;
+          position: relative;
+          color: #0c1150;
+          text-shadow: -5px 5px 0px #259191, -10px 10px 0px #204d4d, -15px 15px 0px #103535;
+        }
+        [data-tooltip]:hover:before {
+          text-shadow: none;
+          float: center;
+          font-size:60% ;
+          content: attr(data-tooltip);
+          position: absolute;
+          width:90%;
+          background-color:rgba(245, 245, 245, 0.575);
+          color: maroon;
+          padding:10px;
+          top: -.5rem;
+          transform: translateY(-40%) translateX(50%);
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          
+
+        }
+        :is(form) label {
+          color: teal;
+        }
+      </style>
         <meta charset="utf-8">
         <title>New webpage</title>
     </head>
@@ -52,6 +86,7 @@
             
           </fieldset>
         </form>
+        <p><span data-tooltip="liddsfsdfsdfsdfdgzxzfjfk">Random text</span></p>
       <h1 id="JELLLO_BELLO">!</h1>
 
     </body>
