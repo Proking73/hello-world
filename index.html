@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <script src="project.js" defer></script>
+ 
     <head>
       <style>
         body {
@@ -38,6 +38,12 @@
       </style>
         <meta charset="utf-8">
         <title>New webpage</title>
+     <style>
+      #About_you{
+      font-size:50px;
+      box-shadow:0px 0px 15px red;
+      }
+     </style>
     </head>
     <body>
       <div>
@@ -47,7 +53,7 @@
             
             <fieldset>
               <div><label>Favorite Color</label></div>
-              <legend>About You</legend>
+              <legend id="About_you">About You</legend>
               <div>
                 <input type="color">
                 
@@ -81,8 +87,18 @@
               </div>
               <br>
               <div><label>Favorite Number</label></div>
-              <div>
-                <input type="datetime-local">
+              <div> 
+                <input type="checkbox"><label> Color</label>
+                <br>
+                <input type="checkbox"><label> Fruit</label>
+                <br>
+                <input type="checkbox"><label> Time</label>
+                <br>
+                <input type="checkbox"><label> Number</label>
+                <br>
+                <input type="checkbox"><label> Password</label>
+                <br>
+                <input type="checkbox"><label> Checkbox</label>
               </div>
               
             
@@ -112,3 +128,4 @@
       </noscript>
     </body>
 </html>
+<!-- make it so that checkbox checks that you did that fav thing -->
