@@ -1,1 +1,152 @@
-of
+<!DOCTYPE html>
+<html>
+ 
+    <head>
+      <style>
+        body {
+          background:conic-gradient(rgb(76, 0, 255), rgb(12, 211, 45));
+        }
+        [data-tooltip] {
+          float: center;
+          text-align: center;
+          font-size: 400%;
+          position: relative;
+          color: #0c1150;
+          text-shadow: -5px 5px 0px #259191, -10px 10px 0px #204d4d, -15px 15px 0px #103535;
+        }
+        [data-tooltip]:hover:before {
+          text-shadow: none;
+          float: center;
+          font-size:60% ;
+          content: attr(data-tooltip);
+          position: absolute;
+          width:90%;
+          background-color:rgba(245, 245, 245, 0.575);
+          color: maroon;
+          padding:10px;
+          top: -.5rem;
+          transform: translateY(-40%) translateX(50%);
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          
+
+        }
+        #resizeVHVW{
+          text-align: center;
+          font-size: 10vh;
+          font-size: 10vw;
+        }
+        :is(form) label {
+          color: teal;
+        }
+      </style>
+        <meta charset="utf-8">
+        <title>New webpage</title>
+     <style>
+      #About_you{
+      font-size:50px;
+      box-shadow:0px 0px 15px red;
+      }
+     
+  
+        .tooltip { 
+            opacity: 0;
+            transition: opacity 3s;
+        }
+  
+        .tooltip:hover {            
+            opacity: 100;
+        }
+     </style>
+    </head>
+    <body>
+      <div>
+        <header><h1 id="resizeVHVW">Resized header</h1></header>
+      <progress value="1" max="100"></progress>
+        <form>
+           
+            
+            <fieldset>
+              <div><label>Favorite Color</label></div>
+              <legend id="About_you">About You</legend>
+              <div>
+                <input type="color">
+                
+              </div>
+              <br>
+              <div><label>Favorite Fruit</label></div>
+              <div>
+                <input list="Fruits" type="text">
+                <datalist id="Fruits">
+                  <option value="Apple">
+                    <option value="Kiwi">
+                      <option value="Pear">
+                        <option value="Watermelon">
+                          <option value="Berries">  
+                </datalist>
+              </div>
+              <br>
+              <div><label>Favorite Time Of Day</label></div>
+              <div>
+                <input type="time">
+              </div>
+              <br>
+              <div><label>Favorite Number</label></div>
+              <div>
+                <input type="number">
+              </div>
+              <br>
+              <div><label>Favorite Password So I Can Hack You</label></div>
+              <div>
+                <input type="password">
+              </div>
+              <br>
+              <div><label>Favorite Number</label></div>
+              <div> 
+                <input type="checkbox"><label> Color</label>
+                <br>
+                <input type="checkbox"><label> Fruit</label>
+                <br>
+                <input type="checkbox"><label> Time</label>
+                <br>
+                <input type="checkbox"><label> Number</label>
+                <br>
+                <input type="checkbox"><label> Password</label>
+                <br>
+                <input type="checkbox"><label> Checkbox</label>
+              </div>
+              
+            
+          </fieldset>
+          <div class="tooltip">GeeksforGeeks
+            <span class="tooltip_text">
+                A Computer science portal for geeks
+            </span>
+        </div>
+        </form>
+        <p><span data-tooltip="liddsfsdfsdfsdfdgzxzfjfk">Random text</span></p>
+      <h1 id="JELLLO_BELLO">!</h1>
+    </div>
+      <noscript>
+        <style>
+        div { 
+          display:none;
+         }
+        #jsnotenabld{
+          text-align: center;
+          transform: translateY(20.1rem);
+          /*overflow-x: padding(text-align:left;);*/
+          
+        }
+        body {
+          background: seashell;
+        }
+        </style>
+
+        <meta content="0;" url="index.html">
+        <h1 id="jsnotenabld">Please enable JavaScript</h1>
+      </noscript>
+    </body>
+</html>
+<!-- make it so that checkbox checks that you did that fav thing -->
