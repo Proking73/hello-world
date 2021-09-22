@@ -37,8 +37,51 @@
           font-size: 10vh;
           font-size: 10vw;
         }
-        :is(form) label {
+        /*:is(form) label {
           color: teal;
+        }*/
+        #parent {
+          background-color: black;
+          width: 300px;
+          height: 300px;
+        }
+        /*relative top blah to make not touching sides*/
+        #child{
+          top: 90px;
+          left: 90px;
+          position: relative;
+          border-radius: 100px;
+          background-color: rgb(209, 194, 106);
+          height: 60px;
+          width: 60px;
+          animation: left-to-right 4s ease-in-out forwards infinite;
+        }
+        #parent:hover #child {
+animation-play-state: paused;
+        }
+        @keyframes left-to-right {
+          0% {
+            transform: translateY(0);
+            opacity: 0;
+          }
+          25% {
+            opacity: 0.25;
+            transform: translateX(100%);
+          }
+          50% {
+            opacity: 0.5;
+transform: translateY(100%) translateX(100%);
+          }
+          /*make it so that every time its a different corner opacity maybe different keyframes with javascript?*/
+          75% {
+            opacity: 0.25;
+            transform: translateY(100%);
+          }
+          100% {
+            opacity: 0;
+            transform: translateY(0) translateX(0);
+
+          }
         }
       </style>
         <meta charset="utf-8">
@@ -127,6 +170,12 @@
         </form>
         <p><span data-tooltip="liddsfsdfsdfsdfdgzxzfjfk">Random text</span></p>
       <h1 id="JELLLO_BELLO">!</h1>
+      <div id="parent">
+<div id="child">
+
+</div>
+
+      </div>
     </div>
       <noscript>
         <style>
