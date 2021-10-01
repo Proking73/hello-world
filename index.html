@@ -6,6 +6,22 @@
         body {
           background:conic-gradient(red, pink);
         }
+        progress {
+          
+          width: calc(100vw - 5%);
+          border-radius: 100px;
+          background-color: yellow;
+          color: green;
+        }
+        progress::-webkit-progress-bar:hover {
+        background-color: yellow;
+        border-radius: 700px;
+      }
+      progress::-webkit-progress-value:hover {
+        background-color: blue;
+        border-radius: 700px;
+      }
+
         [data-tooltip] {
           float: center;
           text-align: center;
@@ -54,7 +70,8 @@
           background-color: rgb(209, 194, 106);
           height: 60px;
           width: 60px;
-          animation: left-to-right 4s ease-in-out forwards infinite;
+          animation:3s ease-in-out forwards infinite;
+          animation-name: left-to-right;
         }
         #parent:hover #child {
 animation-play-state: paused;
@@ -100,6 +117,52 @@ transform: translateY(100%) translateX(100%);
   
         .tooltip:hover {            
             opacity: 100;
+        }
+        /*why does hover not work?*/
+        
+        #beforeAf::before {
+          border-radius: 10px;
+          border-bottom: rgb(204, 134, 87) 10px solid;
+          color: tomato;
+          bottom:1vh;
+          position: relative;
+          font-size: calc(100% - 10px);
+          display: block;
+          content: "Top/Before";
+          background-color: lightgreen;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #beforeAf::after {
+          border-radius: 10px;
+          border-top: thistle 10px solid;
+          color: rgba(255, 123, 0, 0.603);
+          top:1vh;
+          position: relative;
+          font-size: calc(100% - 10px);
+          display: block;
+          content: "Bottom/After";
+          background-color: rgb(124, 110, 32);
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          
+          
+        }
+        #beforeAf {         
+          position: relative;
+          border-radius: 10px;
+          text-shadow: whitesmoke 1px 1px;
+          color: teal;
+          padding: 5%;
+          float: center;
+          font-variant: small-caps;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          background-color:purple;
+          font-size: 10vw;
+          text-align:center;
+        }
+        #beforeAf:hover {
+          top: 2px;
+          left: 2px;
+          box-shadow: rgb(27, 66, 124) 5px 5px  2px;
         }
      </style>
     </head>
@@ -173,10 +236,11 @@ transform: translateY(100%) translateX(100%);
       <div id="parent">
 <div id="child">
 
-</div>
 
-      </div>
     </div>
+  </div>
+<h1 id="beforeAf">Top ^ Bottom ,</h1>
+</div>
       <noscript>
         <style>
         div { 
