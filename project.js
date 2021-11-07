@@ -13,3 +13,5 @@ function toCelsius(fahrenheit) {
   var insept = document.getElementById("inputss").value;
   console.log(insept);
   document.getElementById("insept").innerHTML = toCelsius(insept);
+  var yetsa = document.getElementById("meter").max;  
+  document.getElementById("meter").value = yetsa/2;
